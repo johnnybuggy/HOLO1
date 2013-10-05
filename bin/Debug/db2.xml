@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfTRecord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TRecord>
+    <path>E:\HOLO\03 - Pathogen Bombshell.mp3</path>
+    <id>29</id>
+    <dic>
+      <KeyValuePairStringDouble>
+        <Key>f2v2</Key>
+        <Value>5.0666666666666664</Value>
+      </KeyValuePairStringDouble>
+      <KeyValuePairStringDouble>
+        <Key>f2v3</Key>
+        <Value>0.26666666666666666</Value>
+      </KeyValuePairStringDouble>
+      <KeyValuePairStringDouble>
+        <Key>f3v2</Key>
+        <Value>0.26666666666666666</Value>
+      </KeyValuePairStringDouble>
+      <KeyValuePairStringDouble>
+        <Key>f3v3</Key>
+        <Value>94.133333333333084</Value>
+      </KeyValuePairStringDouble>
+    </dic>
+  </TRecord>
+  <TRecord>
+    <path>E:\HOLO\02-Еловый корень.mp3</path>
+    <id>1</id>
+    <dic>
+      <KeyValuePairStringDouble>
+        <Key>f3v3</Key>
+        <Value>99.354838709677324</Value>
+      </KeyValuePairStringDouble>
+    </dic>
+  </TRecord>
+  <TRecord>
+    <path>E:\HOLO\belaurora 1.mp3</path>
+    <id>17</id>
+    <dic>
+      <KeyValuePairStringDouble>
+        <Key>f3v3</Key>
+        <Value>98.958333333333428</Value>
+      </KeyValuePairStringDouble>
+    </dic>
+  </TRecord>
+  <TRecord>
+    <path>E:\HOLO\03 Night Of The Graveless Souls.mp3</path>
+    <id>2</id>
+    <dic>
+      <KeyValuePairStringDouble>
+        <Key>f3v3</Key>
+        <Value>99.415204678362826</Value>
+      </KeyValuePairStringDouble>
+    </dic>
+  </TRecord>
+  <TRecord>
+    <path>E:\HOLO\05-Black Winter Day.mp3</path>
+    <id>28</id>
+    <dic>
+      <KeyValuePairStringDouble>
+        <Key>f3v3</Key>
+        <Value>99.519230769230589</Value>
+      </KeyValuePairStringDouble>
+    </dic>
+  </TRecord>
+  <TRecord>
+    <path>E:\HOLO\02 - Archangel.mp3</path>
+    <id>26</id>
+    <dic>
+      <KeyValuePairStringDouble>
+        <Key>f2v2</Key>
+        <Value>2.7906976744186047</Value>
+      </KeyValuePairStringDouble>
+      <KeyValuePairStringDouble>
+        <Key>f2v3</Key>
+        <Value>4.6511627906976747</Value>
+      </KeyValuePairStringDouble>
+      <KeyValuePairStringDouble>
+        <Key>f3v2</Key>
+        <Value>4.6511627906976747</Value>
+      </KeyValuePairStringDouble>
+      <KeyValuePairStringDouble>
+        <Key>f3v3</Key>
+        <Value>87.441860465116065</Value>
+      </KeyValuePairStringDouble>
+    </dic>
+  </TRecord>
+  <TRecord>
+    <path>E:\HOLO\01 Diane Schuur &amp; Maynard Ferguson - Just One of Those Things(by Smooth-Jazz).mp3</path>
+    <id>27</id>
+    <dic>
+      <KeyValuePairStringDouble>
+        <Key>f2v3</Key>
+        <Value>0.44444444444444442</Value>
+      </KeyValuePairStringDouble>
+      <KeyValuePairStringDouble>
+        <Key>f3v2</Key>
+        <Value>0.44444444444444442</Value>
+      </KeyValuePairStringDouble>
+      <KeyValuePairStringDouble>
+        <Key>f3v3</Key>
+        <Value>98.666666666666387</Value>
+      </KeyValuePairStringDouble>
+    </dic>
+  </TRecord>
+</ArrayOfTRecord>
