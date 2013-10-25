@@ -159,6 +159,24 @@
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.pbHelp = new System.Windows.Forms.PictureBox();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.nUDVar5Alt = new System.Windows.Forms.NumericUpDown();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.nUDVar4Alt = new System.Windows.Forms.NumericUpDown();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.nUDVar3Alt = new System.Windows.Forms.NumericUpDown();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.lbDiscoPlaylist = new System.Windows.Forms.ListBox();
+            this.button34 = new System.Windows.Forms.Button();
+            this.label39 = new System.Windows.Forms.Label();
+            this.nUDThickness = new System.Windows.Forms.NumericUpDown();
+            this.lbHairSort = new System.Windows.Forms.ListBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.lbViewType = new System.Windows.Forms.ListBox();
+            this.lbViewArray = new System.Windows.Forms.ListBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.cbDiscoHighlight = new System.Windows.Forms.CheckBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.button33 = new System.Windows.Forms.Button();
             this.button32 = new System.Windows.Forms.Button();
             this.button31 = new System.Windows.Forms.Button();
             this.button30 = new System.Windows.Forms.Button();
@@ -172,7 +190,6 @@
             this.label33 = new System.Windows.Forms.Label();
             this.nUDvar3 = new System.Windows.Forms.NumericUpDown();
             this.button25 = new System.Windows.Forms.Button();
-            this.lList = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.nUDOpacity = new System.Windows.Forms.NumericUpDown();
             this.label31 = new System.Windows.Forms.Label();
@@ -187,6 +204,7 @@
             this.button23 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.nUDDiscoNum = new System.Windows.Forms.NumericUpDown();
+            this.lList = new System.Windows.Forms.Label();
             this.cmsScore = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -195,24 +213,8 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button33 = new System.Windows.Forms.Button();
-            this.label36 = new System.Windows.Forms.Label();
-            this.cbDiscoHighlight = new System.Windows.Forms.CheckBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.lbViewArray = new System.Windows.Forms.ListBox();
-            this.lbViewType = new System.Windows.Forms.ListBox();
-            this.lbHairSort = new System.Windows.Forms.ListBox();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.nUDThickness = new System.Windows.Forms.NumericUpDown();
-            this.button34 = new System.Windows.Forms.Button();
-            this.lbDiscoPlaylist = new System.Windows.Forms.ListBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.nUDVar3Alt = new System.Windows.Forms.NumericUpDown();
-            this.nUDVar4Alt = new System.Windows.Forms.NumericUpDown();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.nUDVar5Alt = new System.Windows.Forms.NumericUpDown();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.button35 = new System.Windows.Forms.Button();
+            this.nUDtmp = new System.Windows.Forms.NumericUpDown();
             this.tabControl1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -253,6 +255,10 @@
             this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbHelp)).BeginInit();
             this.tabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDVar5Alt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDVar4Alt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDVar3Alt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDThickness)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDvar5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDvar4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDvar3)).BeginInit();
@@ -262,10 +268,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbDisco)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDDiscoNum)).BeginInit();
             this.cmsScore.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDThickness)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDVar3Alt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDVar4Alt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDVar5Alt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDtmp)).BeginInit();
             this.SuspendLayout();
             // 
             // fbrDlg
@@ -304,7 +307,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1179, 482);
+            this.tabPage4.Size = new System.Drawing.Size(1179, 712);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Startup";
             // 
@@ -787,6 +790,8 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage1.Controls.Add(this.nUDtmp);
+            this.tabPage1.Controls.Add(this.button35);
             this.tabPage1.Controls.Add(this.lOptionsInfo);
             this.tabPage1.Controls.Add(this.button21);
             this.tabPage1.Controls.Add(this.button20);
@@ -984,7 +989,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1179, 482);
+            this.tabPage3.Size = new System.Drawing.Size(1179, 712);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Options";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1688,7 +1693,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1179, 482);
+            this.tabPage5.Size = new System.Drawing.Size(1179, 712);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Graphs";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1909,6 +1914,227 @@
             this.tabPage7.Text = "Discovery";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
+            // nUDVar5Alt
+            // 
+            this.nUDVar5Alt.Enabled = false;
+            this.nUDVar5Alt.Location = new System.Drawing.Point(74, 281);
+            this.nUDVar5Alt.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nUDVar5Alt.Name = "nUDVar5Alt";
+            this.nUDVar5Alt.Size = new System.Drawing.Size(43, 20);
+            this.nUDVar5Alt.TabIndex = 48;
+            this.nUDVar5Alt.Value = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(123, 283);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(15, 14);
+            this.checkBox5.TabIndex = 47;
+            this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
+            // 
+            // nUDVar4Alt
+            // 
+            this.nUDVar4Alt.Enabled = false;
+            this.nUDVar4Alt.Location = new System.Drawing.Point(74, 242);
+            this.nUDVar4Alt.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nUDVar4Alt.Name = "nUDVar4Alt";
+            this.nUDVar4Alt.Size = new System.Drawing.Size(43, 20);
+            this.nUDVar4Alt.TabIndex = 46;
+            this.nUDVar4Alt.Value = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(123, 244);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(15, 14);
+            this.checkBox4.TabIndex = 45;
+            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            // 
+            // nUDVar3Alt
+            // 
+            this.nUDVar3Alt.Enabled = false;
+            this.nUDVar3Alt.Location = new System.Drawing.Point(74, 203);
+            this.nUDVar3Alt.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nUDVar3Alt.Name = "nUDVar3Alt";
+            this.nUDVar3Alt.Size = new System.Drawing.Size(43, 20);
+            this.nUDVar3Alt.TabIndex = 44;
+            this.nUDVar3Alt.Value = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(123, 205);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(15, 14);
+            this.checkBox3.TabIndex = 43;
+            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            // 
+            // lbDiscoPlaylist
+            // 
+            this.lbDiscoPlaylist.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbDiscoPlaylist.FormattingEnabled = true;
+            this.lbDiscoPlaylist.Location = new System.Drawing.Point(18, 480);
+            this.lbDiscoPlaylist.Name = "lbDiscoPlaylist";
+            this.lbDiscoPlaylist.Size = new System.Drawing.Size(278, 225);
+            this.lbDiscoPlaylist.TabIndex = 42;
+            // 
+            // button34
+            // 
+            this.button34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button34.Location = new System.Drawing.Point(302, 654);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(75, 23);
+            this.button34.TabIndex = 41;
+            this.button34.Text = "Play";
+            this.button34.UseVisualStyleBackColor = true;
+            this.button34.Click += new System.EventHandler(this.button34_Click);
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(16, 344);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(59, 13);
+            this.label39.TabIndex = 40;
+            this.label39.Text = "Thickness:";
+            // 
+            // nUDThickness
+            // 
+            this.nUDThickness.Location = new System.Drawing.Point(19, 360);
+            this.nUDThickness.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nUDThickness.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nUDThickness.Name = "nUDThickness";
+            this.nUDThickness.Size = new System.Drawing.Size(120, 20);
+            this.nUDThickness.TabIndex = 39;
+            this.nUDThickness.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            // 
+            // lbHairSort
+            // 
+            this.lbHairSort.FormattingEnabled = true;
+            this.lbHairSort.Items.AddRange(new object[] {
+            "None",
+            "By mean",
+            "By stdev",
+            "By mixed"});
+            this.lbHairSort.Location = new System.Drawing.Point(257, 298);
+            this.lbHairSort.Name = "lbHairSort";
+            this.lbHairSort.Size = new System.Drawing.Size(120, 43);
+            this.lbHairSort.TabIndex = 38;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(179, 328);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(72, 13);
+            this.label38.TabIndex = 37;
+            this.label38.Text = "Hair sort type:";
+            // 
+            // lbViewType
+            // 
+            this.lbViewType.FormattingEnabled = true;
+            this.lbViewType.Items.AddRange(new object[] {
+            "Scatterplot",
+            "Hairplot"});
+            this.lbViewType.Location = new System.Drawing.Point(257, 262);
+            this.lbViewType.Name = "lbViewType";
+            this.lbViewType.Size = new System.Drawing.Size(120, 30);
+            this.lbViewType.TabIndex = 36;
+            // 
+            // lbViewArray
+            // 
+            this.lbViewArray.FormattingEnabled = true;
+            this.lbViewArray.Items.AddRange(new object[] {
+            "Compressed",
+            "Original"});
+            this.lbViewArray.Location = new System.Drawing.Point(257, 226);
+            this.lbViewArray.Name = "lbViewArray";
+            this.lbViewArray.Size = new System.Drawing.Size(120, 30);
+            this.lbViewArray.TabIndex = 35;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(188, 226);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(63, 39);
+            this.label37.TabIndex = 34;
+            this.label37.Text = "Array:\r\n(read from \r\ndb required)";
+            this.label37.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // cbDiscoHighlight
+            // 
+            this.cbDiscoHighlight.AutoSize = true;
+            this.cbDiscoHighlight.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbDiscoHighlight.Location = new System.Drawing.Point(245, 352);
+            this.cbDiscoHighlight.Name = "cbDiscoHighlight";
+            this.cbDiscoHighlight.Size = new System.Drawing.Size(132, 17);
+            this.cbDiscoHighlight.TabIndex = 32;
+            this.cbDiscoHighlight.Text = "Highlight playlist songs";
+            this.cbDiscoHighlight.UseVisualStyleBackColor = true;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(195, 279);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(56, 13);
+            this.label36.TabIndex = 31;
+            this.label36.Text = "View type:";
+            // 
+            // button33
+            // 
+            this.button33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button33.Location = new System.Drawing.Point(302, 683);
+            this.button33.Name = "button33";
+            this.button33.Size = new System.Drawing.Size(75, 23);
+            this.button33.TabIndex = 29;
+            this.button33.Text = "reqest";
+            this.button33.UseVisualStyleBackColor = true;
+            this.button33.Click += new System.EventHandler(this.button33_Click);
+            // 
             // button32
             // 
             this.button32.Location = new System.Drawing.Point(220, 437);
@@ -2041,15 +2267,6 @@
             this.button25.Text = "Reset view";
             this.button25.UseVisualStyleBackColor = true;
             this.button25.Click += new System.EventHandler(this.button25_Click);
-            // 
-            // lList
-            // 
-            this.lList.AutoSize = true;
-            this.lList.Location = new System.Drawing.Point(308, 576);
-            this.lList.Name = "lList";
-            this.lList.Size = new System.Drawing.Size(24, 13);
-            this.lList.TabIndex = 15;
-            this.lList.Text = "info";
             // 
             // label32
             // 
@@ -2215,6 +2432,15 @@
             0,
             0});
             // 
+            // lList
+            // 
+            this.lList.AutoSize = true;
+            this.lList.Location = new System.Drawing.Point(308, 576);
+            this.lList.Name = "lList";
+            this.lList.Size = new System.Drawing.Size(24, 13);
+            this.lList.TabIndex = 15;
+            this.lList.Text = "info";
+            // 
             // cmsScore
             // 
             this.cmsScore.Enabled = false;
@@ -2277,226 +2503,22 @@
             // 
             this.timer1.Interval = 250;
             // 
-            // button33
+            // button35
             // 
-            this.button33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button33.Location = new System.Drawing.Point(302, 683);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(75, 23);
-            this.button33.TabIndex = 29;
-            this.button33.Text = "reqest";
-            this.button33.UseVisualStyleBackColor = true;
-            this.button33.Click += new System.EventHandler(this.button33_Click);
+            this.button35.Location = new System.Drawing.Point(692, 55);
+            this.button35.Name = "button35";
+            this.button35.Size = new System.Drawing.Size(75, 23);
+            this.button35.TabIndex = 73;
+            this.button35.Text = "Push me!";
+            this.button35.UseVisualStyleBackColor = true;
+            this.button35.Click += new System.EventHandler(this.button35_Click);
             // 
-            // label36
+            // nUDtmp
             // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(195, 279);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(56, 13);
-            this.label36.TabIndex = 31;
-            this.label36.Text = "View type:";
-            // 
-            // cbDiscoHighlight
-            // 
-            this.cbDiscoHighlight.AutoSize = true;
-            this.cbDiscoHighlight.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cbDiscoHighlight.Location = new System.Drawing.Point(245, 352);
-            this.cbDiscoHighlight.Name = "cbDiscoHighlight";
-            this.cbDiscoHighlight.Size = new System.Drawing.Size(132, 17);
-            this.cbDiscoHighlight.TabIndex = 32;
-            this.cbDiscoHighlight.Text = "Highlight playlist songs";
-            this.cbDiscoHighlight.UseVisualStyleBackColor = true;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(188, 226);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(63, 39);
-            this.label37.TabIndex = 34;
-            this.label37.Text = "Array:\r\n(read from \r\ndb required)";
-            this.label37.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // lbViewArray
-            // 
-            this.lbViewArray.FormattingEnabled = true;
-            this.lbViewArray.Items.AddRange(new object[] {
-            "Compressed",
-            "Original"});
-            this.lbViewArray.Location = new System.Drawing.Point(257, 226);
-            this.lbViewArray.Name = "lbViewArray";
-            this.lbViewArray.Size = new System.Drawing.Size(120, 30);
-            this.lbViewArray.TabIndex = 35;
-            // 
-            // lbViewType
-            // 
-            this.lbViewType.FormattingEnabled = true;
-            this.lbViewType.Items.AddRange(new object[] {
-            "Scatterplot",
-            "Hairplot"});
-            this.lbViewType.Location = new System.Drawing.Point(257, 262);
-            this.lbViewType.Name = "lbViewType";
-            this.lbViewType.Size = new System.Drawing.Size(120, 30);
-            this.lbViewType.TabIndex = 36;
-            // 
-            // lbHairSort
-            // 
-            this.lbHairSort.FormattingEnabled = true;
-            this.lbHairSort.Items.AddRange(new object[] {
-            "None",
-            "By mean",
-            "By stdev",
-            "By mixed"});
-            this.lbHairSort.Location = new System.Drawing.Point(257, 298);
-            this.lbHairSort.Name = "lbHairSort";
-            this.lbHairSort.Size = new System.Drawing.Size(120, 43);
-            this.lbHairSort.TabIndex = 38;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(179, 328);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(72, 13);
-            this.label38.TabIndex = 37;
-            this.label38.Text = "Hair sort type:";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(16, 344);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(59, 13);
-            this.label39.TabIndex = 40;
-            this.label39.Text = "Thickness:";
-            // 
-            // nUDThickness
-            // 
-            this.nUDThickness.Location = new System.Drawing.Point(19, 360);
-            this.nUDThickness.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nUDThickness.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nUDThickness.Name = "nUDThickness";
-            this.nUDThickness.Size = new System.Drawing.Size(120, 20);
-            this.nUDThickness.TabIndex = 39;
-            this.nUDThickness.Value = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            // 
-            // button34
-            // 
-            this.button34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button34.Location = new System.Drawing.Point(302, 654);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(75, 23);
-            this.button34.TabIndex = 41;
-            this.button34.Text = "Play";
-            this.button34.UseVisualStyleBackColor = true;
-            this.button34.Click += new System.EventHandler(this.button34_Click);
-            // 
-            // lbDiscoPlaylist
-            // 
-            this.lbDiscoPlaylist.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbDiscoPlaylist.FormattingEnabled = true;
-            this.lbDiscoPlaylist.Location = new System.Drawing.Point(18, 480);
-            this.lbDiscoPlaylist.Name = "lbDiscoPlaylist";
-            this.lbDiscoPlaylist.Size = new System.Drawing.Size(278, 225);
-            this.lbDiscoPlaylist.TabIndex = 42;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(123, 205);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(15, 14);
-            this.checkBox3.TabIndex = 43;
-            this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
-            // 
-            // nUDVar3Alt
-            // 
-            this.nUDVar3Alt.Enabled = false;
-            this.nUDVar3Alt.Location = new System.Drawing.Point(74, 203);
-            this.nUDVar3Alt.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nUDVar3Alt.Name = "nUDVar3Alt";
-            this.nUDVar3Alt.Size = new System.Drawing.Size(43, 20);
-            this.nUDVar3Alt.TabIndex = 44;
-            this.nUDVar3Alt.Value = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            // 
-            // nUDVar4Alt
-            // 
-            this.nUDVar4Alt.Enabled = false;
-            this.nUDVar4Alt.Location = new System.Drawing.Point(74, 242);
-            this.nUDVar4Alt.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nUDVar4Alt.Name = "nUDVar4Alt";
-            this.nUDVar4Alt.Size = new System.Drawing.Size(43, 20);
-            this.nUDVar4Alt.TabIndex = 46;
-            this.nUDVar4Alt.Value = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(123, 244);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(15, 14);
-            this.checkBox4.TabIndex = 45;
-            this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
-            // 
-            // nUDVar5Alt
-            // 
-            this.nUDVar5Alt.Enabled = false;
-            this.nUDVar5Alt.Location = new System.Drawing.Point(74, 281);
-            this.nUDVar5Alt.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.nUDVar5Alt.Name = "nUDVar5Alt";
-            this.nUDVar5Alt.Size = new System.Drawing.Size(43, 20);
-            this.nUDVar5Alt.TabIndex = 48;
-            this.nUDVar5Alt.Value = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(123, 283);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(15, 14);
-            this.checkBox5.TabIndex = 47;
-            this.checkBox5.UseVisualStyleBackColor = true;
-            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
+            this.nUDtmp.Location = new System.Drawing.Point(773, 58);
+            this.nUDtmp.Name = "nUDtmp";
+            this.nUDtmp.Size = new System.Drawing.Size(120, 20);
+            this.nUDtmp.TabIndex = 74;
             // 
             // HOLO
             // 
@@ -2562,6 +2584,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbHelp)).EndInit();
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDVar5Alt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDVar4Alt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDVar3Alt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDThickness)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDvar5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDvar4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDvar3)).EndInit();
@@ -2571,10 +2597,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbDisco)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDDiscoNum)).EndInit();
             this.cmsScore.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nUDThickness)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDVar3Alt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDVar4Alt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDVar5Alt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDtmp)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2760,6 +2783,8 @@
         private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.NumericUpDown nUDVar4Alt;
         private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.Button button35;
+        private System.Windows.Forms.NumericUpDown nUDtmp;
     }
 }
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <HarvestProps xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SnapCount>700</SnapCount>
+  <SnapCount>500</SnapCount>
   <SnapSize>4096</SnapSize>
-  <DownScaleRate>200</DownScaleRate>
+  <DownScaleRate>40</DownScaleRate>
   <StatsCalcMethod>Clustered 2D</StatsCalcMethod>
   <AmplitudeFunc>Max(Log(X), 0)^2</AmplitudeFunc>
   <FreqCutoffRate>1.5</FreqCutoffRate>

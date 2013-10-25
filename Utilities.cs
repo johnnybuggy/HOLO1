@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading;
 
 using System.Xml.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization;
 using System.IO;
 using System.Windows.Forms;
 
@@ -261,6 +263,23 @@ namespace HOLO
                 MessageBox.Show(e.Message);
                 return null;
             }
+        }
+
+        public static void SaveToBIN(object S, string filename)
+        {
+            FileStream fs = new FileStream(filename, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
+            BinaryFormatter bf = new BinaryFormatter();
+            bf.Serialize(fs, S);
+            fs.Close();
+        }
+
+        public static object LoadFromBIN(string filename)
+        {
+            FileStream fs = new FileStream(filename, FileMode.Open, FileAccess.Read, FileShare.Read);
+            BinaryFormatter bf = new BinaryFormatter();
+            var ans = bf.Deserialize(fs);
+            fs.Close();
+            return ans;
         }
 
         public static List<List<double>> MakeTableFromKKV(ref List<KeyValuePair<int, KeyValuePair<string, double>>> lkkv, int varcount, int rowcount)

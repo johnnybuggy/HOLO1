@@ -117,6 +117,7 @@
     <Compile Include="SoundProcessing.cs" />
     <Compile Include="SoundReader.cs" />
     <Compile Include="StatsAnalysis.cs" />
+    <Compile Include="TableClass.cs" />
     <Compile Include="Utilities.cs" />
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>

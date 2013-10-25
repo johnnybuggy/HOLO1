@@ -481,6 +481,43 @@ namespace MuzCatalogr
             return ans;
         }
 
+        public Dictionary<string, double> CalcAllStats3D2(Harvesting._song_profile itm, float downscale_rate, float k_factor = 24)
+        {
+            var ans = new Dictionary<string, double>();
+
+            int N = (int)(itm.fft_snaps[0].Count / downscale_rate);
+
+            for (int i = 0; i < N; i++)
+                for (int j = 0; j < N; j++)
+                    ans.Add("f" + i.ToString() + "v" + j.ToString(), 0);
+
+            List<double> prev_dist = null;
+            double K = (double)(N * itm.fft_snaps.Count);
+
+            for (int k = 1; k < itm.fft_snaps.Count; k++)
+            {
+                var distances = Utilities.DownscaleList(itm.fft_snaps[k], downscale_rate)
+                    .Zip(Utilities.DownscaleList(itm.fft_snaps[k - 1], downscale_rate), (v, w) => Math.Pow(v - w, 2)).ToList();
+
+                //var distances = ClusterAnalysis.CentroidDistances(ref CC, Utilities.DownscaleList(itm.fft_snaps[k], downscale_rate));                
+                
+                var distsum = distances.Sum();
+                var step2 = distances.Select(v => Math.Pow(1 - v / distsum, k_factor)).ToList();
+                var s2max = step2.Max();
+                step2 = step2.Select(v => (v >= (0.065 * s2max) ? v / s2max : 0)).ToList();
+
+                if (k > 1)
+                {
+                    for (int i = 0; i < prev_dist.Count; i++)
+                        for (int j = 0; j < step2.Count; j++)
+                            ans["f" + i.ToString() + "v" + j.ToString()] += prev_dist[i] * step2[j] / K;
+                }
+                prev_dist = step2;
+            }
+
+            return ans;
+        }
+
         public void PostProcessSnaps(Harvesting._song_profile sp, int mwsize)
         {
             double mw = 1.0 / mwsize;
@@ -529,7 +566,14 @@ namespace MuzCatalogr
             public List<KeyValuePair<string, double>> dic;
         };
 
+        public struct TRecordDic
+        {
+            public string path;
+            public Dictionary<string, double> dic;
+        };
+
         public ConcurrentBag<TRecord> Records;
+        public ConcurrentBag<TRecordDic> RecordsDic;
 
         public HOLOProperties.HarvestProps HP;
         CancellationTokenSource cts;
@@ -609,7 +653,7 @@ namespace MuzCatalogr
             float DownscaleRate = HP.DownScaleRate;
             int ClustersCount = HP.ClusteringProperties.ClustersCount;
                         
-            Records = new ConcurrentBag<TRecord>();
+            RecordsDic = new ConcurrentBag<TRecordDic>();
             
             Task.Factory.StartNew(() =>
                 {                    
@@ -618,8 +662,6 @@ namespace MuzCatalogr
                         Parallel.ForEach(fl, options, f =>
                         {
                             options.CancellationToken.ThrowIfCancellationRequested();
-
-                            //s_count = fl.IndexOf(f);
 
                             var itm = new Harvesting._song_profile(Path.GetFileName(f), f);
 
@@ -647,13 +689,17 @@ namespace MuzCatalogr
                                     else if (HP.StatsCalcMethod == "Clustered 1D")
                                         d = CalcAllStats2(itm, ref ClusterConfig, DownscaleRate);
                                     else if (HP.StatsCalcMethod == "Clustered 2D")
-                                        d = CalcAllStats3D(itm, ref ClusterConfig, DownscaleRate);
+                                        d = CalcAllStats3D2(itm, DownscaleRate);
 
-                                    //MDB.OpenDB();
                                     MDB.PutNewRecord(fl.IndexOf(f).ToString(), itm.name, itm.path, d, "test.db", "");
                                     
-                                    /*var r = new TRecord();
-                                    var kv = new KeyValuePair<string, double>();
+                                    var r = new TRecordDic();
+                                    r.dic = d;
+                                    r.dic.Add("id", fl.IndexOf(f));                                  
+                                    r.path = itm.path;
+                                    RecordsDic.Add(r);
+
+                                    /*var kv = new KeyValuePair<string, double>();
                                     r.dic = new List<KeyValuePair<string, double>>();
                                     d.ToList().Where(v => v.Value > 0).ToList().ForEach(v => { kv.Key = v.Key; kv.Value = v.Value; r.dic.Add(kv); });
                                     r.id = s_count;
@@ -714,6 +760,22 @@ namespace MuzCatalogr
                         MDB.CloseDB();
                         ManageDB.PostprocessDB();
                         Utilities.ExecuteCommandAsync("copy test.db \"" + tbDBFile.Text + "\"");
+
+                        var tbl = new TableClass<double>();
+                        var rowlist = RecordsDic.ToList();
+                        var rows = RecordsDic.OrderBy(v => v.path).Select(v => v.dic).ToList();
+                        var rownames = RecordsDic.OrderBy(v => v.path).Select(v => v.path).ToList();
+                        tbl.SetFromListOfDict(rows, rownames);
+                        tbl.SaveToFile("tabletest.bin");
+
+                        var dsts = tbl.GetEuclideanNeighbors(1, 10);
+
+                        var tbl2 = new TableClass<double>();
+                        tbl2.LoadFromFile("tabletest.bin");
+                        
+                        tbl2.SaveToFile("tabletest.xml", "XML");
+                        tbl2.LoadFromFile("tabletest.xml", "XML");
+                        
                         //Utilities.SaveToXML(Records.ToList(), typeof(List<TRecord>), "db2.xml");
                     }
 
@@ -1978,6 +2040,14 @@ namespace MuzCatalogr
         private void checkBox5_CheckedChanged(object sender, EventArgs e)
         {
             nUDVar5Alt.Enabled = checkBox5.Checked;
+        }
+
+        private void button35_Click(object sender, EventArgs e)
+        {
+            var tbl = new TableClass<double>();
+            tbl.LoadFromFile("tabletest.bin");
+            var neighbors = tbl.GetEuclideanNeighbors((int)nUDtmp.Value, 10);
+            MessageBox.Show(string.Join("\n", neighbors.ToArray()));
         }
     }
 }
